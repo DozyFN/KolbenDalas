@@ -1,0 +1,101 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    border: 0;
+    text-decoration: none;
+    color: inherit;
+    font-size:inherit
+
+}
+header{
+    background: rgb(57, 62, 80);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.438);
+}
+.container{
+    margin: 0 auto;
+    width: 1024px;
+}
+header .container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 0;
+}
+header .container .links{
+    display: flex;
+    gap: 20px;
+    color: rgb(0, 0, 0);
+    font-size: 18px;
+}
+header h1{
+    font-size: 32px;
+}
+.welcome .container{
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 16px;
+    background: url(https://sun9-79.userapi.com/impg/CLULwTS-zzWRdsWnvM_IhaTYHSQqW9y382t3cQ/ZQ1AbsgO41I.jpg?size=604x340&quality=95&sign=b5f7619e40c2caa73599bf8e25e0db76&type=album);
+    background-size: cover;
+height: 640px;
+border-radius: 64px;
+margin-top: 60px;
+}
+.welcome h2{
+    font-size: 60px;
+    line-height: 55px;
+    letter-spacing: 1px;
+}
+.welcome p{
+    font-size: 24px;
+    color: rgb(0, 0, 0);
+    letter-spacing: 2px;
+}
+.welcome button{
+    margin-top: 16px;
+    width: fit-content;
+    background-color: rgb(156, 219, 238);
+    font-size: 24px;
+    padding: 16px 32px;
+    border-radius: 16px;
+    box-shadow: 0 4px 20px black;
+    transition: .5s;
+}
+header a{
+    transition: .5s;
+}
+header a:hover{
+    color:orange ;
+    transition: .4s;
+}
+.welcome button:hover {
+    color: orange;
+    background-color: white;
+    transition: .4s;
+    cursor: pointer;
+    box-shadow: 0 2px 20px orange;
+
+}
+.category .container{
+    display: flex;
+    gap: 16px;
+    margin-top: 32px;
+}
+.category .container .cat{
+    width: 100%;
+}
+.category img{
+    width: 100%;
+    height: 300px;
+    object-fit: contain;
+    border-radius: 44px;
+}
+.carousel img{
+    height: 750px;
+    object-fit: cover;
+}
+.carousel h5, .carousel p{
+    color: rgb(39, 39, 39);
+}
