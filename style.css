@@ -37,7 +37,7 @@ header h1{
     flex-direction: column;
     justify-content: center;
     gap: 16px;
-    background: url(https://st.biglion.ru/cfs15/company_photo/91/30/91304662a05460ed2bae0194052cc078.jpg);
+    background: url(http://st.biglion.ru/cfs15/company_photo/91/30/91304662a05460ed2bae0194052cc078.jpg);
     background-size: cover;
 height: 640px;
 border-radius: 64px;
@@ -100,3 +100,4 @@ header a:hover{
     color: rgb(39, 39, 39);
 
 }
+
