@@ -37,7 +37,7 @@ header h1{
     flex-direction: column;
     justify-content: center;
     gap: 16px;
-    background: url(https://sun9-79.userapi.com/impg/CLULwTS-zzWRdsWnvM_IhaTYHSQqW9y382t3cQ/ZQ1AbsgO41I.jpg?size=604x340&quality=95&sign=b5f7619e40c2caa73599bf8e25e0db76&type=album);
+    background: url(https://st.biglion.ru/cfs15/company_photo/91/30/91304662a05460ed2bae0194052cc078.jpg);
     background-size: cover;
 height: 640px;
 border-radius: 64px;
@@ -98,4 +98,5 @@ header a:hover{
 }
 .carousel h5, .carousel p{
     color: rgb(39, 39, 39);
+
 }
