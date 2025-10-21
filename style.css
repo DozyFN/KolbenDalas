@@ -79,7 +79,7 @@ header a:hover{
 
 }
 .category .container{
-    display: flex;
+    display: left;
     gap: 16px;
     margin-top: 32px;
 }
@@ -100,5 +100,6 @@ header a:hover{
     color: rgb(39, 39, 39);
 
 }
+
 
 
