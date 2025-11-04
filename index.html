@@ -259,6 +259,40 @@
 </head>
 <body>
 
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8" />
+<title>Тест по анатомии и физиологии</title>
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+  }
+  .question {
+    margin-bottom: 20px;
+  }
+  .question h3 {
+    margin-bottom: 10px;
+  }
+  .answers label {
+    display: block;
+    margin-bottom: 5px;
+  }
+  .correct {
+    color: green;
+  }
+  .incorrect {
+    color: red;
+  }
+  button {
+    padding: 10px 20px;
+    font-size: 16px;
+  }
+</style>
+</head>
+<body>
+
 <h1>Тест по анатомии и физиологии</h1>
 
 <div class="question" data-correct="3">
@@ -340,42 +374,36 @@
 <script>
 function checkAnswers() {
   let score = 0;
-  const totalQuestions = document.querySelectorAll('.question').length;
   const questions = document.querySelectorAll('.question');
 
   questions.forEach(q => {
     const correctAnswerIndex = q.getAttribute('data-correct');
-    const selected = q.querySelector('input[type="radio"]:checked');
-    const answerArea = q.querySelector('.answers');
-
-    // Очистить предыдущие подсветки
-    answerArea.querySelectorAll('label').forEach(label => {
+    const answersLabels = q.querySelectorAll('label');
+    // Удаляем предварительные стили
+    answersLabels.forEach(label => {
       label.style.color = '';
     });
-
+    const selected = q.querySelector('input[type="radio"]:checked');
+    const correctInput = q.querySelector(`input[value="${correctAnswerIndex}"]`);
     if (selected) {
       if (selected.value === correctAnswerIndex) {
         score++;
-        // Выделить правильный ответ зеленым
-        answerArea.querySelector(`input[value="${correctAnswerIndex}"]`)
-          .nextElementSibling
-          .style.color = 'green';
+        // Выделяем правильный ответ зелёным
+        correctInput.nextElementSibling.style.color = 'green';
       } else {
-        // выделить неправильный и правильный ответы
+        // Выделяем выбранный неправильный красным
         selected.nextElementSibling.style.color = 'red';
-        answerArea.querySelector(`input[value="${correctAnswerIndex}"]`)
-          .nextElementSibling
-          .style.color = 'green';
+        // Выделяем правильный зелёным
+        correctInput.nextElementSibling.style.color = 'green';
       }
     } else {
-      // Если ответ не выбран, выделить правильный
-      answerArea.querySelector(`input[value="${correctAnswerIndex}"]`)
-        .nextElementSibling.style.color = 'green';
+      // Если не выбран ответ, выделяем правильный зелёным
+      correctInput.nextElementSibling.style.color = 'green';
     }
   });
 
   document.getElementById('result').textContent = 
-    `Вы правильно ответили на ${score} из ${totalQuestions} вопросов.`;
+    `Вы правильно ответили на ${score} из ${questions.length} вопросов.`;
 }
 </script>
 
@@ -390,6 +418,7 @@ function checkAnswers() {
 
 
 </html>
+
 
 
 
