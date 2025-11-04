@@ -166,85 +166,6 @@
                 </div>
             </div>
     </section> -->
-<!DOCTYPE html>
-<html lang="ru">
-<head>
-<meta charset="UTF-8" />
-<title>Тест по анатомии и физиологии</title>
-<style>
-  body {
-    font-family: Arial, sans-serif;
-    margin: 20px;
-  }
-  .question {
-    margin-bottom: 20px;
-  }
-  .answers label {
-    display: block;
-    margin-bottom: 5px;
-  }
-  #result {
-    margin-top: 20px;
-    font-weight: bold;
-  }
-</style>
-</head>
-<body>
-
-<h1>Тест по анатомии и физиологии</h1>
-
-<div class="question" data-correct="3">
-  <h3>1. Какую функцию выполняет селезёнка в кровеносной системе?</h3>
-  <div class="answers">
-    <label><input type="radio" name="q1" value="1" /> осуществляет синтез гемоглобина</label>
-    <label><input type="radio" name="q1" value="2" /> регулирует уровень сахара в крови</label>
-    <label><input type="radio" name="q1" value="3" /> участвует в фильтрации крови</label>
-  </div>
-</div>
-<!-- добавьте остальные вопросы по аналогии, если хотите -->
-<!-- Для простоты оставлю один вопрос -->
-
-<button onclick="checkAnswers()">Проверить ответы</button>
-
-<h2 id="result"></h2>
-
-<script>
-function checkAnswers() {
-  let score = 0;
-  const questions = document.querySelectorAll('.question');
-
-  questions.forEach(q => {
-    const correctAnswerIndex = q.getAttribute('data-correct');
-    const answersLabels = q.querySelectorAll('label');
-    // Очистить предыдущее выделение
-    answersLabels.forEach(label => {
-      label.style.color = '';
-    });
-    const selected = q.querySelector('input[type="radio"]:checked');
-    const correctInput = q.querySelector(`input[value="${correctAnswerIndex}"]`);
-    if (selected) {
-      if (selected.value === correctAnswerIndex) {
-        score++;
-        // Верный ответ — выделяем зеленым
-        correctInput.nextElementSibling.style.color = 'green';
-      } else {
-        // Неверный ответ — выделяем красным выбранный и зеленым правильный
-        selected.nextElementSibling.style.color = 'red';
-        correctInput.nextElementSibling.style.color = 'green';
-      }
-    } else {
-      // Не выбран ответ, выделяем правильный
-      correctInput.nextElementSibling.style.color = 'green';
-    }
-  });
-
-  document.getElementById('result').textContent = 
-    `Вы правильно ответили на ${score} из ${questions.length} вопросов.`;
-}
-</script>
-
-</body>
-</html>
 
 
 </div>
@@ -255,6 +176,7 @@ function checkAnswers() {
 
 
 </html>
+
 
 
 
